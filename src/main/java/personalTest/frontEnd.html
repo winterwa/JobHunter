@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event 2</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            position: relative;
+        }
+        .apply {
+            width: 80px;
+            height: 30px;
+            background-color: antiquewhite;
+            line-height: 30px;
+            text-align: center;
+            position:absolute;
+            bottom:20px;
+            right: 10px;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="apply">Apply</div>
+</div>
+<script>
+    var wrapper =  document.getElementsByClassName('wrapper')[0];
+    var apply = document.getElementsByClassName('apply')[0];
+
+    wrapper.addEventListener('click', function (e) {
+        console.log('... wrapper ... ');
+    }, false);
+
+    apply.addEventListener('click', function (event) {
+        event.stopPropagation();
+        console.log('... apply ... ');
+    }, false);
+
+</script>
+</body>
+</html>
+
