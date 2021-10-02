@@ -5,7 +5,7 @@ import redis.clients.jedis.Jedis;
 public class RedisConnection {
     private static final String INSTANCE = "52.53.173.24";
     private static final int PORT = 6379;
-    private static final String PASSWORD = "foobared001";
+    private static final String PASSWORD = "tbd";
     private static final String SEARCH_KEY_TEMPLATE = "search:lat=%s&lon=%s&keyword=%s";
     private static final String FAVORITE_KEY_TEMPLATE = "history:userId=%s";
 
